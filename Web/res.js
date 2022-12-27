@@ -17,7 +17,7 @@ const arraySubs = [
     },
     {
         "title": "Electronics Results",
-        "code": "ECE"
+        "code": "EC"
     },
     {
         "title": "Electrical Results",

@@ -25,7 +25,7 @@ const LinkList = [
     },
     {
         "title": "Electronics Results",
-        "url": "ECE"
+        "url": "EC"
     },
     {
         "title": "Electrical Results",
