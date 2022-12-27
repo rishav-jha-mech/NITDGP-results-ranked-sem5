@@ -89,8 +89,8 @@ fetch(`../${fileName}`)
     .then((res) => res.json())
     .then((data) => {
         arena.innerHTML = ''
-        jsonData = data;
-        setData(data);
+        jsonData = setTheRank(data); // Called Once only
+        setData(jsonData);
     }).catch((err) => {
         console.log(err)
         arena.innerHTML = `<h2 class="text-danger minh300 center">No Data exists</h2>`
@@ -130,7 +130,12 @@ function search(){
     setData(filteredData);
 }
 
-
+function setTheRank(data) {
+    data.map((item, index) => {
+        item[0] = index + 1;
+    });
+    return data;
+}
 function setData(data){
     print('Called setData')
     arena.innerHTML = '';
@@ -143,7 +148,7 @@ function setData(data){
         arena.innerHTML += `
             <div class="card w-100 mb-3">
                 <div class="card-header position-relative">
-                    <h6 class="text-capitalize mb-0">${index + 1}. ${getName(item)}</h6>
+                    <h6 class="text-capitalize mb-0">${item[0]}. ${getName(item)}</h6>
                 </div>
                 <div class="card-body">
                     <div class="row text-white mb-2">

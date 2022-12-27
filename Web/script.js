@@ -2,7 +2,7 @@ const SastaReact = document.getElementById('main')
 downloadPDF = document.createElement('div');
 downloadPDF.setAttribute('class','item');
 downloadPDF.innerHTML = `
-<a href="https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem4/raw/main/PROVISIONAL%20RESULT%20OF%20UG%204TH%20SEMESTER%20REGULAR%20EXAMINATION_2021_2022.pdf" rel="noopener noreferrer"> <i class="fas bg-danger fa-file-pdf text-white fs-2"></i> Download PDF</a>
+<a href="https://github.com/rishav-jha-mech/NITDGP-results-ranked-sem4/raw/main/UG-5th.pdf" rel="noopener noreferrer"> <i class="fas bg-danger fa-file-pdf text-white fs-2"></i> Download PDF</a>
 `
 SastaReact.appendChild(downloadPDF)
 
