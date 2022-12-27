@@ -14,7 +14,7 @@ def main():
     subjectCodes = ['BT','CE','CH','CS','EC','EE','ME','MM']
     rankingCriteria = ['CGPA','SGPA']
     # Ask user to select a subject code
-    for i in range(10):
+    for i in range(8):
         print(f"{i} {subjectCodes[i]}")
     print("\n")
     subjectInt = int(input("\nEnter Subject sl. no. whose rank you want  "))
@@ -24,7 +24,7 @@ def main():
         print(f"{i} {rankingCriteria[i]}")
     criteriaInt = int(input("\n\nEnter the criteria of sorting   "))
     print("\n")
-    if subjectInt < 0 or subjectInt > 9:
+    if subjectInt < 0 or subjectInt > 8:
         print("Enter valid subject code")
         return
     if criteriaInt < 0 or criteriaInt >1:
@@ -48,12 +48,15 @@ def main():
             # print(count)
         # Sorting according to CGPA or maybe SCGPA
         sortedList = sorted(resultsDict, key=lambda x : resultsDict[x][cry],reverse=True)
-        # print(json.dumps(sortedList,indent=4))
 
-        for key in sortedList:            
+        for key in sortedList:
             f = open(f"Ranked-{subjectCodes[subjectInt]}-{rankingCriteria[criteriaInt]}-Sem5.txt", "a")
+            js = open(f"Ranked-{subjectCodes[subjectInt]}-{rankingCriteria[criteriaInt]}-Sem5.json", "a")
             listToStr = ' '.join(map(str, resultsDict[key]))
+            jsonData = json.dumps(resultsDict[key],indent=4)
+            js.write(f"{jsonData},\n")
             f.write(f"{listToStr}\n")
+            js.close()
             f.close()
 
 # passedStudentsOnly()
