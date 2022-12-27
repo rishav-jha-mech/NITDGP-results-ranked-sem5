@@ -13,7 +13,7 @@ const LinkList = [
     },
     {
         "title": "Computer Results",
-        "url": "CSE"
+        "url": "CS"
     },
     {
         "title": "Chemical Results",
