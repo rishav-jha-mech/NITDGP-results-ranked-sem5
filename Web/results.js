@@ -4,7 +4,7 @@ const arraySubs = [
         "code": "BT"
     },
     {
-        "title": "Computer Results",
+        "title": "Computer Science Results",
         "code": "CS"
     },
     {
@@ -24,7 +24,7 @@ const arraySubs = [
         "code": "EE"
     },
     {
-        "title": "Mechanical Results",
+        "title": "Royal Mech Results",
         "code": "ME"
     },
     {
@@ -60,7 +60,7 @@ upBtn.onclick = () => {
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
-let subject = params?.subject;
+let subject = params?.subject ?? 'ME'; // Royal Mech Rules you Fools !
 let type = params?.type ?? 'CGPA';
 if (type === 'CGPA') {
     cgpaBtn.className = 'btn btn-info';

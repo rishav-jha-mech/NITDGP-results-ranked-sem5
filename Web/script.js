@@ -58,11 +58,4 @@ for (const key in LinkList) {
 
 thatBody = document.getElementsByTagName('body')[0];
 
-footer = document.createElement('div');
-footer.setAttribute('class','footer');
-
-footer.innerHTML = `
-<a href="">Made with ❤ by Devraj </a>
-`
-
 thatBody.appendChild(footer)

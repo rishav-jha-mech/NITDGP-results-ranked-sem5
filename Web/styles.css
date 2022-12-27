@@ -28,10 +28,10 @@ h1 {
 #main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: var(--primary-color);
-  margin: 2.5rem 0;
-  height: 800px;
-  width: 100%;
+  margin: 2.5rem auto;
 }
 
 #main .item a {
@@ -40,6 +40,19 @@ h1 {
   text-decoration: none;
 }
 
+#main .item {
+  margin: 1rem auto;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--secondary-color);
+}
 .upBtn {
   position: fixed;
   bottom: 20px;
@@ -70,35 +83,24 @@ h1 {
   }
 }
 
-#main .item {
-  width: 100%;
-  max-width: 450px;
-  margin: 1rem 0.75rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: capitalize;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--secondary-color);
-}
 
-.footer {
+footer {
   background: var(--primary-color);
   padding: 1.5rem;
   text-align: center;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--secondary-color);
 }
 
-.footer a {
+footer a {
   color: var(--bs-white);
-  text-transform: capitalize;
   font-weight: 600;
   text-decoration: none;
 }
-
+footer .fab {
+  font-size: 1.5rem;
+  color: aqua;
+  margin-bottom: 1.5rem;
+}
 .fa-angle-left {
   position: absolute;
   top: 2rem;
